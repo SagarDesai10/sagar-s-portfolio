@@ -1,0 +1,72 @@
+<section class="projects-section section" id="projects">
+  <div class="container">
+    <h2 class="section-title">My Projects</h2>
+    
+    <!-- Featured Projects -->
+    <h3 class="section-subtitle">Featured Projects</h3>
+    <div class="projects-grid">
+      <div *ngFor="let project of getFeaturedProjects()" class="project-card glass-card">
+        <div class="project-image" *ngIf="project.image">
+          <img [src]="project.image" [alt]="project.title">
+        </div>
+        <div class="project-content">
+          <h3>{{project.title}}</h3>
+          <p class="project-description">{{project.description}}</p>
+          
+          <div class="tech-stack">
+            <span *ngFor="let tech of project.technologies" class="tech-tag">{{tech}}</span>
+          </div>
+          
+          <div class="project-links">
+            <a *ngIf="project.github" [href]="project.github" target="_blank" class="project-link github">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              GitHub
+            </a>
+            <a *ngIf="project.demo" [href]="project.demo" target="_blank" class="project-link demo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="16 12 12 8 8 12"></polyline>
+                <line x1="12" y1="16" x2="12" y2="8"></line>
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Other Projects -->
+    <h3 class="section-subtitle other-projects">Other Projects</h3>
+    <div class="projects-grid small-cards">
+      <div *ngFor="let project of getNonFeaturedProjects()" class="project-card glass-card">
+        <div class="project-content">
+          <h3>{{project.title}}</h3>
+          <p class="project-description">{{project.description}}</p>
+          
+          <div class="tech-stack">
+            <span *ngFor="let tech of project.technologies" class="tech-tag">{{tech}}</span>
+          </div>
+          
+          <div class="project-links">
+            <a *ngIf="project.github" [href]="project.github" target="_blank" class="project-link github">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+              GitHub
+            </a>
+            <a *ngIf="project.demo" [href]="project.demo" target="_blank" class="project-link demo">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="16 12 12 8 8 12"></polyline>
+                <line x1="12" y1="16" x2="12" y2="8"></line>
+              </svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

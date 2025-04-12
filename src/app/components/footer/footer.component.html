@@ -1,0 +1,50 @@
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-content">
+      <div class="footer-info">
+        <h3>{{aboutData.name}}</h3>
+        <p>{{aboutData.title}}</p>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a routerLink="/about">About</a></li>
+          <li><a routerLink="/skills">Skills</a></li>
+          <li><a routerLink="/projects">Projects</a></li>
+          <li><a routerLink="/education">Education</a></li>
+          <li><a routerLink="/contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-social">
+        <h4>Connect</h4>
+        <div class="social-icons">
+          <a [href]="contactInfo.socialLinks.github" target="_blank" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+            </svg>
+          </a>
+          <a [href]="contactInfo.socialLinks.linkedin" target="_blank" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+          </a>
+          <a [href]="contactInfo.socialLinks.leetcode" target="_blank" aria-label="Leetcode">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M16.102 17.93L14.188 16.01C13.95 15.775 13.94 15.385 14.175 15.15C14.412 14.912 14.802 14.902 15.04 15.137L16.962 17.046C17.198 17.283 17.207 17.673 16.97 17.91C16.732 18.145 16.34 18.155 16.102 17.93Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8.796 8.905C8.796 8.905 10.75 10.023 12.244 10.776C13.738 11.53 15.382 12.15 15.382 12.15C15.382 12.15 13.586 13.219 12.098 13.923C10.61 14.628 8.796 15.344 8.796 15.344V8.904V8.905Z" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M3 5H21V19H3V5Z" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {{currentYear}} Sagar Desai. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

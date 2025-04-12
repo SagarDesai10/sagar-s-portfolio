@@ -1,0 +1,38 @@
+<header class="header" [class.scrolled]="isScrolled">
+  <div class="header-container">
+    <div class="logo">
+      <a href="#">Sagar Desai</a>
+    </div>
+    
+    <nav class="nav-menu">
+      <ul>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/skills" routerLinkActive="active">Skills</a></li>
+        <li><a routerLink="/projects" routerLinkActive="active">Projects</a></li>
+        <li><a routerLink="/education" routerLinkActive="active">Education</a></li>
+        <li><a routerLink="/experience" routerLinkActive="active">Experience</a></li>
+        <li><a routerLink="/contact" routerLinkActive="active">Contact</a></li>
+      </ul>
+    </nav>
+    
+    <div class="header-right">
+      <app-dark-mode-toggle></app-dark-mode-toggle>
+      <button class="menu-toggle" (click)="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="mobile-menu" [class.active]="isMobileMenuOpen">
+    <ul>
+      <li><a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">About</a></li>
+      <li><a routerLink="/skills" routerLinkActive="active" (click)="closeMenu()">Skills</a></li>
+      <li><a routerLink="/projects" routerLinkActive="active" (click)="closeMenu()">Projects</a></li>
+      <li><a routerLink="/education" routerLinkActive="active" (click)="closeMenu()">Education</a></li>
+      <li><a routerLink="/experience" routerLinkActive="active" (click)="closeMenu()">Experience</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active" (click)="closeMenu()">Contact</a></li>
+    </ul>
+  </div>
+</header>

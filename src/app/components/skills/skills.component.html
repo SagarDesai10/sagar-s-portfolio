@@ -1,0 +1,39 @@
+<section class="skills-section section" id="skills">
+  <div class="container">
+    <h2 class="section-title">Technical Skills</h2>
+    
+    <div class="skills-categories">
+      <div class="category-tabs">
+        <button 
+          *ngFor="let category of categories" 
+          (click)="setActiveCategory(category)"
+          [class.active]="activeCategory === category"
+          class="category-tab">
+          {{category}}
+        </button>
+      </div>
+    </div>
+    
+    <div class="skills-content">
+      <div class="skills-grid">
+        <div *ngFor="let skill of getSkillsByCategory(activeCategory)" class="skill-card glass-card">
+          <div class="skill-icon" *ngIf="skill.icon">
+            <i [class]="skill.icon"></i>
+          </div>
+          <div class="skill-info">
+            <h3 class="skill-name">{{skill.name}}</h3>
+            <div class="skill-level">
+              <div class="level-dots">
+                <span class="dot" [class.filled]="skill.level >= 20"></span>
+                <span class="dot" [class.filled]="skill.level >= 40"></span>
+                <span class="dot" [class.filled]="skill.level >= 60"></span>
+                <span class="dot" [class.filled]="skill.level >= 80"></span>
+                <span class="dot" [class.filled]="skill.level >= 90"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

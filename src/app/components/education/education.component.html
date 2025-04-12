@@ -1,0 +1,64 @@
+<section class="education-section section" id="education">
+  <div class="container">
+    <h2 class="section-title">Education</h2>
+    
+    <!-- Education Timeline -->
+    <div class="timeline-container">
+      <div class="timeline">
+        <div *ngFor="let edu of education" class="timeline-item glass-card">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">{{edu.period}}</div>
+          <div class="timeline-content">
+            <h3>{{edu.degree}}</h3>
+            <h4>{{edu.institution}}</h4>
+            <p>{{edu.grade}}</p>
+            <ul>
+              <li *ngFor="let detail of edu.details">{{detail}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications Section -->
+    <h2 class="section-title certifications-title">Certifications</h2>
+    <div class="certifications-container">
+      <div class="certification-grid">
+        <div *ngFor="let cert of certifications" class="certification-card glass-card">
+          <div class="certification-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <div class="certification-content">
+            <h3>{{cert.name}}</h3>
+            <div class="certification-info">
+              <span class="certification-issuer">{{cert.issuer}}</span>
+              <span class="certification-year">{{cert.year}}</span>
+            </div>
+            <a *ngIf="cert.link" [href]="cert.link" class="btn-view-cert" target="_blank">View Certificate</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Achievements Section -->
+    <h2 class="section-title achievements-title">Achievements</h2>
+    <div class="achievements-container">
+      <div class="achievement-timeline">
+        <div *ngFor="let achievement of achievements" class="achievement-item">
+          <div class="achievement-year">{{achievement.year}}</div>
+          <div class="achievement-card glass-card">
+            <h3>{{achievement.title}}</h3>
+            <p>{{achievement.description}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Resume Download -->
+    <div class="resume-download">
+      <a href="assets/pdf/DESAI_SAGAR_RESUME1.pdf" class="btn-download" download>
+        <i class="fas fa-download"></i> Download Resume
+      </a>
+    </div>
+  </div>
+</section>

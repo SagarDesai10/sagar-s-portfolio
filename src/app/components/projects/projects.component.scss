@@ -1,0 +1,145 @@
+.projects-section {
+  padding-top: 100px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--glass-shadow), 0 15px 30px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.project-content {
+  padding: 25px;
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: var(--accent-primary);
+  }
+}
+
+.project-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  min-height: 80px;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+.tech-tag {
+  background-color: rgba(var(--accent-primary-rgb), 0.1);
+  color: var(--accent-primary);
+  padding: 6px 12px;
+  border-radius: 30px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: 15px;
+  margin-top: auto;
+}
+
+.project-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background-color: rgba(var(--accent-primary-rgb), 0.1);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background-color: var(--accent-primary);
+    color: white;
+    transform: translateY(-3px);
+  }
+  
+  svg {
+    stroke: currentColor;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .project-description {
+    min-height: auto;
+  }
+  
+  .project-links {
+    flex-direction: column;
+  }
+  
+  .project-content h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 1.8rem;
+  color: var(--accent-primary);
+  margin-bottom: 30px;
+  
+  &.other-projects {
+    margin-top: 60px;
+  }
+}
+
+.project-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 10px 10px 0 0;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+}
+
+.small-cards {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  
+  .project-card {
+    display: flex;
+    flex-direction: column;
+  }
+}

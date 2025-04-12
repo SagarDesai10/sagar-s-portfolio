@@ -1,0 +1,40 @@
+<section class="about-section section" id="about">
+  <div class="container">
+    <h2 class="section-title">About Me</h2>
+    
+    <div class="about-content glass-card">
+      <div class="about-text">
+        <h3>Hi, I'm <span class="highlight">{{aboutData.name}}</span></h3>
+        <h4>{{aboutData.title}}</h4>
+        
+        <p>{{aboutData.bio}}</p>
+        
+        <div class="about-description">
+          <p *ngFor="let paragraph of aboutData.description">{{paragraph}}</p>
+        </div>
+        
+        <div class="about-buttons">
+          <a [href]="aboutData.resumeLink" class="btn btn-primary" download>Download Resume</a>
+          <a routerLink="/contact" class="btn btn-outline">Contact Me</a>
+        </div>
+      </div>
+      
+      <div class="about-stats">
+        <div class="stat-item">
+          <div class="stat-number">{{exp}}</div>
+          <div class="stat-label">Year Experience</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Projects</div>
+        </div>
+        
+        <div class="stat-item">
+          <div class="stat-number">5+</div>
+          <div class="stat-label">APIs Built</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

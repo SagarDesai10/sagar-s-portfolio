@@ -18,7 +18,11 @@
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "@types/three": "^0.175.0",
+    "gsap": "^3.12.7",
+    "ngx-scrollreveal": "^3.0.0",
     "rxjs": "~7.8.0",
+    "three": "^0.175.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
