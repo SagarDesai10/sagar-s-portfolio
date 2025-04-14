@@ -12,7 +12,7 @@ export const ABOUT_DATA: AboutModel = {
     "Builds backends that behave and frontends that don’t fight back."
   ],
   image: 'assets/images/profile.jpg',
-  resumeLink: 'assets/pdf/DESAI_SAGAR_RESUME1.pdf',
+  resumeLink: 'https://drive.google.com/file/d/1uJ_eVJCb0x8ULr48f5aUo5t9pgQKz7Xh/view?usp=drive_link',
   links: {
     github:'https://github.com/SagarDesai10',
     linkedin: 'www.linkedin.com/in/sagar-desai-5b720b1bb',

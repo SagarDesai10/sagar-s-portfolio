@@ -92,13 +92,13 @@ export const SKILLS_DATA: SkillModel[] = [
   {
     name: 'Data Structure',
     level: 85,
-    icon: 'fas fa-paper-plane',
-    category: SkillCategory.TOOLS
+    icon: 'fa-brands fa-apple',
+    category: SkillCategory.DATA_MANAGEMENT
   },
   {
     name: 'DBMS',
     level: 85,
     icon: 'devicon-intellij-plain',
-    category: SkillCategory.TOOLS
+    category: SkillCategory.DATA_MANAGEMENT
   }
 ]; 

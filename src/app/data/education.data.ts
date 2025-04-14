@@ -25,16 +25,52 @@ export const EDUCATION_DATA: EducationModel[] = [
 
 export const CERTIFICATIONS_DATA: CertificationModel[] = [
   {
-    name: 'AMCAT',
-    issuer: 'Pivotal',
-    year: '2023',
-    link: '#'
+    name: 'JDBC',
+    issuer: 'Coursera',
+    year: '2022',
+    link: 'https://drive.google.com/file/d/1Ns8xmFg3LDIks4YbwTmdpwvxisf586Ab/view?usp=drive_link'
   },
   {
-    name: 'Java Coursera',
-    issuer: 'Oracle',
+    name: 'Java Script',
+    issuer: 'University Of Michigan',
     year: '2022',
-    link: '#'
+    link: 'https://drive.google.com/file/d/1NiWMnSNbvkIP_BIn_SjSFyXqir4F68rL/view?usp=drive_link'
+  },
+  {
+    name: 'Web Development',
+    issuer: 'UCDAVIS',
+    year: '2023',
+    link: 'https://drive.google.com/file/d/1H0Lz8s-36WGefkbMzG3qA8Hej16Usj5K/view?usp=drive_link'
+  },
+  {
+    name: 'ML With Python',
+    issuer: 'IBM',
+    year: '2023',
+    link: 'https://drive.google.com/file/d/1rfI4YqBP_XY3JcrJ37aOwLiweYR_6-Sg/view?usp=drive_link'
+  },
+  {
+    name: 'Data Analysis With Python',
+    issuer: 'IBM',
+    year: '2022',
+    link: 'https://drive.google.com/file/d/1zGI5LPVLzgszJxmMbQ_6pH5vUCvDvjHR/view?usp=drive_link'
+  },
+  {
+    name: 'DevOps',
+    issuer: 'IBM',
+    year: '2023',
+    link: 'https://drive.google.com/file/d/105wN0TWtMKvKQ3FlWdThzxUNKpBGyvzn/view?usp=drive_link'
+  },
+  {
+    name: 'Peer-to-Peer Protocols and LAN',
+    issuer: 'University of Colorado',
+    year: '2022',
+    link: 'https://drive.google.com/file/d/1n1HAO1hYNE-a9jWpYfnxMOFLvMKZrEQ6/view?usp=drive_link'
+  },
+  {
+    name: 'Internet Of Things',
+    issuer: 'University of California,Irvine',
+    year: '2023',
+    link: 'https://drive.google.com/file/d/1HhBp-2P8TGyxh7AvsPtPtltJiJKPtS3B/view?usp=drive_link'
   }
 ];
 
