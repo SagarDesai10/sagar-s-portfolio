@@ -21,7 +21,6 @@ export const PROJECTS_DATA: ProjectModel[] = [
       'Specification'
     ],
     github: 'https://github.com/SagarDesai10/spring-boot-scalable-backend',
-    demo: 'https://github.com/SagarDesai10/spring-boot-scalable-backend',
     featured: false,
     details: `This proof-of-concept (POC) showcases a production-ready, scalable backend system built with Spring Boot. 
     It includes JWT-based authentication and authorization using Spring Security, API documentation with Swagger, 
@@ -42,7 +41,6 @@ export const PROJECTS_DATA: ProjectModel[] = [
     image: 'assets/images/projects/ecommerce.jpg',
     technologies: ['Spring Boot', 'JavaMailSender', 'SMTP'],
     github: 'https://github.com/SagarDesai10/email-service',
-    demo: 'https://github.com/SagarDesai10/email-service',
     featured: false,
     details: 'This proof-of-concept (POC) demonstrates a simple and extensible email service built using Spring Boot. It encapsulates the core functionality of sending plain text and HTML emails through configurable SMTP settings. The service provides a REST API to send emails with support for multiple recipients (To, CC, BCC) and is structured to be easily integrated into larger microservices architectures or standalone applications. '
   },
@@ -52,7 +50,6 @@ export const PROJECTS_DATA: ProjectModel[] = [
     image: 'assets/images/projects/api-gateway.jpg',
     technologies: ['Spring Boot', 'Spring Cloud Gateway', 'Eureka', 'Circuit Breaker', 'JWT'],
     github: 'https://github.com/SagarDesai10/spring-cloud-gateway',
-    demo: 'https://github.com/SagarDesai10/spring-cloud-gateway',
     featured: false,
     details: `This proof-of-concept (POC) implements an API Gateway using Spring Cloud Gateway. It acts as the single entry point 
     for routing requests to various microservices within the system. The gateway handles dynamic routing, request filtering, 
@@ -70,7 +67,6 @@ export const PROJECTS_DATA: ProjectModel[] = [
     image: 'assets/images/projects/opentelemetry-jaeger.jpg',
     technologies: ['Spring Boot', 'OpenTelemetry', 'Jaeger', 'Eureka', 'Microservices'],
     github: 'https://github.com/SagarDesai10/openTelemetry-Jaeger',
-    demo: 'https://github.com/SagarDesai10/openTelemetry-Jaeger',
     featured: false,
     details: `This proof-of-concept (POC) demonstrates distributed tracing in a microservices architecture using OpenTelemetry with Jaeger as the trace visualizer. 
     It integrates OpenTelemetry SDKs to automatically collect and export trace data from Spring Boot services. 
@@ -84,7 +80,6 @@ export const PROJECTS_DATA: ProjectModel[] = [
     image: 'assets/images/projects/micrometer-zipkin.jpg',
     technologies: ['Spring Boot', 'Micrometer', 'Zipkin', 'Eureka', 'Microservices'],
     github: 'https://github.com/SagarDesai10/micrometer-zipkin',
-    demo: 'https://github.com/SagarDesai10/micrometer-zipkin',
     featured: false,
     details: `This POC showcases how to implement distributed tracing using Micrometer with Zipkin in a Spring Boot microservices setup. 
     Each service is instrumented using Micrometer to capture trace and span data, which is then exported to Zipkin for visualization.
@@ -114,7 +109,6 @@ export const PROJECTS_DATA: ProjectModel[] = [
     image: 'assets/images/projects/health-insurance-ml.jpg',
     technologies: ['Python', 'Machine Learning', 'Pandas', 'Scikit-Learn', 'Matplotlib'],
     github: 'https://github.com/SagarDesai10/Health-Insurance-Cost-ML-',
-    demo: 'https://github.com/SagarDesai10/Health-Insurance-Cost-ML-',
     featured: false,
     details: `This project uses machine learning techniques to predict health insurance costs based on various features such as age, 
     sex, BMI, children, smoking habits, and region. The model leverages data pre-processing, feature engineering, and multiple 
