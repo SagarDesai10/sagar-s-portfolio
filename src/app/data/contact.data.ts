@@ -5,7 +5,8 @@ export const CONTACT_INFO_DATA: ContactInfoModel = {
   location: 'Ahmedabad, Gujarat, India',
   socialLinks: {
     github:'https://github.com/SagarDesai10',
-    linkedin: 'www.linkedin.com/in/sagar-desai-5b720b1bb',
+    linkedin: 'https://www.linkedin.com/in/sagar-desai-5b720b1bb',
     leetcode: 'https://leetcode.com/u/desai_sagar/',
+    codechef:'https://www.codechef.com/users/desai_sagar_45'
   }
 };

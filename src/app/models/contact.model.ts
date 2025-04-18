@@ -13,5 +13,6 @@ export interface ContactInfoModel {
     linkedin: string;
     leetcode?: string;
     twitter?: string;
+    codechef?:string;
   };
 } 
