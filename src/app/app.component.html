@@ -3,7 +3,7 @@
 <main class="main-content">
   <app-three-scene class="hero-section"></app-three-scene>
   <div class="content-wrapper">
-    <router-outlet></router-outlet>
+    <router-outlet (activate)="onActivate($event)"></router-outlet>
   </div>
 </main>
 

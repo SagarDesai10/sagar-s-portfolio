@@ -45,6 +45,7 @@ html, body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 /* Main content layout */
@@ -52,17 +53,31 @@ html, body {
   min-height: 100vh;
   width: 100%;
   position: relative;
+  background-color: var(--bg-primary); /* Ensure the main content has the background color */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .content-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section {
   margin: 80px 0;
   padding: 40px 0;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling within sections */
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .section-title {
@@ -147,6 +162,79 @@ html, body {
   .section-title {
     font-size: 2rem;
   }
+  
+  .content-wrapper {
+    padding: 15px;
+  }
+  
+  /* Ensure no horizontal overflow on mobile */
+  .container {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 576px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+  }
+  
+  .section {
+    margin: 30px 0;
+    padding: 15px 0;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  
+  .content-wrapper {
+    padding: 10px;
+  }
+  
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  
+  .glass-card {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 520px) {
+  .section-title {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+  }
+  
+  .section-title::after {
+    width: 60px;
+    height: 3px;
+  }
+  
+  .content-wrapper {
+    padding: 8px;
+  }
+  
+  .container {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  
+  .glass-card {
+    padding: 12px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
 }
 
 /* Hero section with Three.js */
@@ -167,4 +255,13 @@ html, body {
 
 .grecaptcha-badge { 
   visibility: hidden; 
+}
+
+/* Dark mode - ensure everything has correct background */
+.dark-mode body, 
+.dark-mode .main-content, 
+.dark-mode app-root, 
+.dark-mode main, 
+.dark-mode app-footer {
+  background-color: var(--bg-primary);
 }
