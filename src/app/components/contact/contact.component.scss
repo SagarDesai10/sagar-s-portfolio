@@ -191,11 +191,26 @@
       border-color: var(--accent-primary);
       box-shadow: 0 0 0 2px rgba(var(--accent-primary-rgb), 0.2);
     }
+    
+    &.ng-invalid.ng-touched {
+      border-color: #dc3545;
+    }
   }
   
   textarea {
     resize: vertical;
     min-height: 120px;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    
+    span {
+      display: block;
+      line-height: 1.4;
+    }
   }
 }
 

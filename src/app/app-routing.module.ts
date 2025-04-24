@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes, ExtraOptions } from '@angular/router';
 
 export const routes: Routes = [
-  { path: '', redirectTo: 'about', pathMatch: 'full' },
+  // Root path with no redirect - will be handled by app component for animation
+  { path: '', pathMatch: 'full', children: [] },
   { 
     path: 'about', 
     loadComponent: () => import('./components/about/about.component').then(m => m.AboutComponent)
@@ -27,7 +28,7 @@ export const routes: Routes = [
     path: 'contact', 
     loadComponent: () => import('./components/contact/contact.component').then(m => m.ContactComponent)
   },
-  { path: '**', redirectTo: 'about' }
+  { path: '**', redirectTo: '' }
 ];
 
 const routerOptions: ExtraOptions = {

@@ -1,0 +1,28 @@
+<div class="signature-overlay" [class.visible]="visible" #overlayElement>
+  <div class="signature-container">
+    <div class="signature-text">
+      <!-- First name -->
+      <div class="letter" #letterS>S</div>
+      <div class="letter" #letterA>a</div>
+      <div class="letter" #letterG>g</div>
+      <div class="letter" #letterA2>a</div>
+      <div class="letter" #letterR>r</div>
+      
+      <!-- Space -->
+      <div class="letter space-letter"></div>
+      
+      <!-- Last name -->
+      <div class="letter" #letterD>D</div>
+      <div class="letter" #letterE>e</div>
+      <div class="letter" #letterS2>s</div>
+      <div class="letter" #letterA3>a</div>
+      <div class="letter" #letterI>i</div>
+    </div>
+    
+    <!-- Logo badge that appears after animation - user can click to continue -->
+    <div class="logo-badge" [class.show]="completed" #logoBadge (click)="finishAnimation()">
+      SD
+    </div>
+    
+  </div>
+</div>

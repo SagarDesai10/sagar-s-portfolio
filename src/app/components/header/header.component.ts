@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, Output, EventEmitter } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { DarkModeToggleComponent } from '../dark-mode-toggle/dark-mode-toggle.component';
@@ -13,6 +13,7 @@ import { DarkModeToggleComponent } from '../dark-mode-toggle/dark-mode-toggle.co
 export class HeaderComponent implements OnInit {
   isScrolled = false;
   isMobileMenuOpen = false;
+  @Output() logoClick = new EventEmitter<void>();
 
   constructor() { }
 
@@ -33,5 +34,9 @@ export class HeaderComponent implements OnInit {
 
   closeMenu() {
     this.isMobileMenuOpen = false;
+  }
+
+  onLogoClick() {
+    this.logoClick.emit();
   }
 }

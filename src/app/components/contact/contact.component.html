@@ -17,7 +17,9 @@
             </div>
             <div class="contact-text">
               <h4>Email</h4>
-              <a href="mailto:desaisagar8090&#64;gmail.com">desaisagar8090&#64;gmail.com</a>
+              <a class="contact-me-style hover:text-primary cursor-pointer flex items-center" href="mailto:desaisagar8090&#64;gmail.com">
+                desaisagar8090&#64;gmail.com
+              </a>
             </div>
           </div>
           
@@ -78,7 +80,18 @@
           
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" [(ngModel)]="contactFormData.email" required>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              [(ngModel)]="contactFormData.email" 
+              #email="ngModel"
+              pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+              required>
+            <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error-message">
+              <span *ngIf="email.errors?.['required']">Email is required</span>
+              <span *ngIf="email.errors?.['pattern']">Please enter a valid email address</span>
+            </div>
           </div>
           
           <div class="form-group">
