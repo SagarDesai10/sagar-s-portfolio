@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ProjectModel } from '../../models/project.model';
+import { ProjectCategory, ProjectModel } from '../../models/project.model';
 import { PROJECTS_DATA } from '../../data/projects.data';
 
 @Component({
@@ -12,12 +12,15 @@ import { PROJECTS_DATA } from '../../data/projects.data';
 })
 export class ProjectsComponent {
   projects: ProjectModel[] = PROJECTS_DATA;
+  categories = Object.values(ProjectCategory);
+    
+  activeCategory: ProjectCategory = ProjectCategory.BACKEND;
   
-  getFeaturedProjects(): ProjectModel[] {
-    return this.projects.filter(project => project.featured);
+  setActiveCategory(category: ProjectCategory): void {
+      this.activeCategory = category;
   }
-  
-  getNonFeaturedProjects(): ProjectModel[] {
-    return this.projects.filter(project => !project.featured);
-  }
+
+  getProjectsByCategory(category: ProjectCategory): ProjectModel[] {
+      return this.projects.filter(project => project.category === category);
+    }
 }

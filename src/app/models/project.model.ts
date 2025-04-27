@@ -1,10 +1,20 @@
 export interface ProjectModel {
   title: string;
   description: string;
-  image: string;
   technologies: string[];
+  category:ProjectCategory;
   github?: string;
   demo?: string;
-  featured: boolean;
   details?: string;
 } 
+
+
+export enum ProjectCategory{
+
+  BACKEND='Backend',
+  FRONTEND='Frontend',
+  FULLSTACK='Fullstack',
+  ML='Machine Learning'
+
+
+}
